@@ -1,0 +1,30 @@
+{{- $surtitle := .context.surtitle -}}
+{{- $title := .context.title -}}
+{{- $text := .context.text -}}
+{{- $notes := .context.notes -}}
+{{- $blockId := .blockId | default "" -}}
+
+{{- with $surtitle }}
+  <p class="surtitle">{{ partial "func/PrepareHTML" . }}</p>
+{{ end }}
+
+{{- with $title }}
+  <h2>{{ partial "func/PrepareHTML" . }}</h2>
+{{ end }}
+
+{{- with $text }}
+  {{- $text = partial "commons/text" (dict "text" $text) -}}
+  {{- if $notes -}}
+    {{- partial "func/PrepareNotes" (dict 
+        "html" $text 
+        "blockId" $blockId 
+        "notes" $notes
+    ) -}}
+  {{- else -}}
+    {{ $text }}
+  {{- end -}}
+
+  {{- with $notes }}
+    {{ partial "commons/notes.html" (dict "notes" . "blockId" $blockId ) }}
+  {{- end }}
+{{ end }}

@@ -1,0 +1,42 @@
+.block-editorial
+    .row
+        align-items: center
+        .content
+            @extend .col-md-6
+        .media
+            @extend .col-md-6
+    h2, p
+        text-wrap: balance
+    .text:not(:last-child)
+        margin-bottom: $paragraph-margin-bottom
+    p:last-child
+        margin-bottom: 0
+    .btn
+        @extend .btn-primary
+        @if variable-exists(icons-map)
+            &::before
+                @include icon("arrow-right-short")
+                font-size: 1.4rem
+                margin-right: .5rem
+                vertical-align: -0.35rem
+            @media (prefers-reduced-motion: no-preference)
+                &:hover
+                    &::before
+                        transform: translateX(.3rem)
+                &::before
+                    transition: transform $transition-duration $transition-effect
+    img
+        height: auto
+        width: 100%
+    &-rtl
+        .row
+            flex-direction: row-reverse
+    
+    @include media-breakpoint-down(md)
+        .media
+            margin-bottom: $spacer
+            order: -1
+            picture
+                display: block
+                margin-left: - $gutter-mobile
+                margin-right: - $gutter-mobile

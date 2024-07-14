@@ -1,0 +1,9 @@
+{{- with .Params.blocks -}}
+  {{- range $index, $block := . -}}
+    {{- $isFirst := cond (eq $index 0) true false -}}
+    {{- $block = merge $block (dict "first" $isFirst) -}}
+    {{- $block = merge $block (dict "index" $index) -}}
+    {{- $template := printf "blocks/templates/%s.html" .type -}}
+    {{ partial $template $block }}
+  {{- end -}}
+{{- end -}}

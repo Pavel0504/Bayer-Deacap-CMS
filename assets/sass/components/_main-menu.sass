@@ -1,0 +1,61 @@
+.main-menu
+    --bs-offcanvas-bg: #{$menu-background-color}
+    @extend .offcanvas
+    @extend .offcanvas-end
+    .header
+        @extend .offcanvas-header
+        .title
+            @extend .offcanvas-title
+        button
+            @extend .btn-close
+            background-image: escape-svg($btn-close-bg)
+            background-position: center
+            background-repeat: no-repeat
+            background-size: 1rem auto
+    .content
+        @extend .offcanvas-body
+        @include media-breakpoint-up(lg)
+            align-items: baseline
+    .nav
+        @include media-breakpoint-down(lg)
+            align-items: center
+            flex-direction: column
+            text-align: center
+            li
+                font-size: px2rem(20)
+            ul li
+                font-size: px2rem(16)
+        &:last-child
+            @include media-breakpoint-up(lg)
+                margin-right: - $nav-link-padding-x
+    .nav-primary
+        width: 100%
+        display: flex
+        justify-content: space-between
+        li 
+            display: flex
+            align-items: center
+            a:after
+                height: 2.625rem
+                content: ""
+                position: absolute
+                top: 50%
+                -webkit-transform: translateY(-50%) skewX(-11deg) skewY(-11deg)
+                -ms-transform: translateY(-50%) skewX(-11deg) skewY(-11deg)
+                transform: translateY(-50%) skewX(-11deg) skewY(-11deg)
+                border-right-width: 0.0625rem
+                border-right-style: Solid
+                border-right-color: rgb(151, 151, 151)
+                width: 0.0625rem
+                margin-left: 3vw
+    .nav-link
+        --bs-nav-link-color: #{$header-color}
+        &:hover
+            --bs-nav-link-hover-color: #{$header-color}
+    .dropdown-toggle
+        &::after
+            border-top-color: $header-color
+    .dropdown-menu
+        li
+            a:after
+                content: none

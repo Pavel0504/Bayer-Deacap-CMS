@@ -1,0 +1,26 @@
+links:
+  - blank: false
+    title: О компании
+    url: "#"
+    links:
+      - blank: false
+        title: О нас
+        url: "#"
+      - blank: false
+        title: Карьера
+        url: "#"
+      - blank: false
+        title: Антикоррупционные стандарты ведения бизнеса
+        url: "#"
+      - blank: false
+        title: Открытые инновации и партнерства
+        url: "#"
+  - blank: false
+    title: Области<br />терапии
+    url: "#"
+  - blank: false
+    title: Исследования и<br />разработки
+    url: "#"
+  - blank: false
+    title: Корпоративная<br />ответственность
+    url: "#"

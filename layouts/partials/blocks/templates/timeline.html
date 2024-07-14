@@ -1,0 +1,14 @@
+{{ with . }}
+  <section class="block-timeline {{- with .background }} block-bg{{ end }}" {{- partial "func/SetAnim" (dict "element" "block") }}>
+    <div class="container">
+      {{ partial "blocks/heading.html" . }}
+      {{ with .items }}
+        <div class="row">
+          <div>
+            {{ partial "commons/timeline.html" . }}
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </section>
+{{ end }}

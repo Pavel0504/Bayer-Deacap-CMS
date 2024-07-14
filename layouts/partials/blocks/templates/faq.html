@@ -1,0 +1,11 @@
+<section class="block-faq{{ with .background }} block-bg{{ end }}"{{ partial "func/SetAnim" (dict "element" "block") }}>
+  <div class="container">
+    
+    {{ partial "blocks/heading.html" . }}
+
+    {{ range .items }}
+      {{ partial "commons/details.html" . }}
+    {{ end }}
+
+  </div>
+</section>

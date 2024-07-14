@@ -1,0 +1,32 @@
+{{- $IsMultiLingual := .Site.IsMultiLingual -}}
+{{- $Lang := .Site.Language.Lang -}}
+{{- with .Site.Data.banner -}}
+  {{- $state := false -}}
+  {{- $text := false -}}
+  {{- with .text -}}
+    {{- $text = . -}}
+  {{- end -}}
+  {{- with .state -}}
+    {{ $state = . }}
+  {{- end -}}
+  {{- if $IsMultiLingual -}}
+    {{- with index . $Lang -}}
+      {{- with .text -}}
+        {{ $text = . }}
+      {{- end -}}
+      {{- with .state -}}
+        {{ $state = . }}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- if $text }}
+    <div class="banner{{ with $state }} banner-{{ . }}{{ end }}" role="alert">
+      <div class="container">
+        {{- with $text }}
+          <p>{{ . | markdownify }}</p>
+        {{- end }}
+      </div>
+    </div>
+  {{ end -}}
+{{- end -}}

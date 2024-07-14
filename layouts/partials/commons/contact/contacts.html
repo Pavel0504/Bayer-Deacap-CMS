@@ -1,0 +1,13 @@
+{{ if or .phone .fax .email }}
+<ul>
+  {{ with .phone }}
+    {{ partial "commons/contact/phone.html" . }}
+  {{ end }}
+  {{ with .fax }}
+    {{ partial "commons/contact/fax.html" . }}
+  {{ end }}
+  {{ with .email }}
+    {{ partial "commons/contact/email.html" . }}
+  {{ end }}
+</ul>
+{{ end }}

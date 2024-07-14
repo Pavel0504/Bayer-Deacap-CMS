@@ -1,0 +1,15 @@
+{{ $first := .first }}
+
+<section class="block-images{{ with .background }} block-bg{{ end }}"{{ partial "func/SetAnim" (dict "element" "block") }}>
+  <div class="container">
+    
+    {{ partial "blocks/heading.html" . }}
+
+    {{ with .images }}
+      {{ partial "commons/images" (dict
+        "images" .
+        "first" $first) }}
+    {{ end }}
+
+  </div>
+</section>

@@ -1,0 +1,13 @@
+{{- $id := printf "gallery-%s" (.index | string) -}}
+{{- $isFirst := .first -}}
+<section class="block-gallery{{ with .background }} block-bg{{ end }}"{{ partial "func/SetAnim" (dict "element" "block") }}>
+  <div class="container">
+    {{ partial "blocks/heading.html" . }}
+
+    {{ $ratio := .ratio | default 1 }}
+    {{ $column := float .column | default 3 }}
+    {{ with .gallery }}
+      {{ partial "commons/gallery" (dict "images" . "ratio" $ratio "column" $column "id" $id "isFirst" $isFirst) }}
+    {{ end }}
+  </div>
+</section>

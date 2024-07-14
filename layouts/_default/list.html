@@ -1,0 +1,10 @@
+{{ define "hero"}}
+  {{- partial "pages/hero" . -}}
+{{ end }}
+
+{{ define "main" }}
+  {{ partial "pages/schema" . }}
+  {{ partial "pages/heading" . }}
+  {{ partial "pages/blocks" . }}
+  {{ partial "pages/container" . }}
+{{ end }}

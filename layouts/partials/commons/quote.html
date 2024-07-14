@@ -1,0 +1,40 @@
+<figure class="quote">
+  {{ with .quote}}
+    <blockquote>
+      <p>{{ partial "func/PrepareHTML" . | markdownify }}</p>
+    </blockquote>
+  {{ end }}
+
+  {{ with .author }}
+    <figcaption>
+      {{ with .image}}
+        {{ $desktop := site.Params.image.xsmall | default false }}
+        {{ $mobile := site.Params.image.xsmall | default false }}
+        {{ partial "commons/image.html" (dict
+            "src" .src
+            "alt" .alt
+            "desktop" $desktop
+            "mobile" $mobile
+            "crop" "Top"
+          ) }}
+      {{ end }}
+      <div>
+        {{ $text := .text | default false }}
+        {{ $url := .url | default false }}
+        {{ with .title}}
+          <cite>{{ partial "func/PrepareHTML" . }}</cite>{{ if $text}}<br>{{ end }}
+        {{ end }}
+        {{ with .text}}
+          {{ if $url}}
+            {{ $title := i18n "link.blank_aria" (dict "Title" (partial "func/PrepareHTML" .)) }}
+            <a href="{{ $url | safeURL }}" title="{{ $title }}" target="_blank">
+          {{ end }}
+          {{ partial "func/PrepareHTML" . }}
+          {{ with $url}}
+            </a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </figcaption>
+  {{ end }}
+</figure>

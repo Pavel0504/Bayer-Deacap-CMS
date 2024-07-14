@@ -1,0 +1,4 @@
+{{- if and site.Params.cookie_banner.enable hugo.IsProduction }}
+  {{ partialCached "footer/cookie-banner/modal.html" . }}
+  {{ partialCached "footer/cookie-banner/javascript.html" . }}
+{{ end -}}
