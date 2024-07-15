@@ -1,10 +1,8 @@
 ---
 isPage: true
-<<<<<<< HEAD
-=======
 draft: false
->>>>>>> 54946d08dafef5e41e3d4a3674bebe1b45df7ff2
 title: test
+description: Legal mentions page1
 hero:
   cta:
     blank: false
