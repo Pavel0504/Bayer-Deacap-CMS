@@ -1,7 +1,7 @@
 ---
-isIndex: false
-draft: true
-title: "{{ replace .Name "-" " " | title }}"
+isIndex: true
+draft: false
+title: "{{ replace .name "-" " " | title }}"
 date: {{ .Date }}
 categories:
 authors:
