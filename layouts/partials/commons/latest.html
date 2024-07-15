@@ -9,7 +9,7 @@
     <section class="latest latest-{{ $section }}"{{ partial "func/SetAnim" (dict "element" "block") }}>
       <header class="heading">
         {{- $title := i18n (printf "%s.latest" $section) -}}
-        <h2>{{ $title }}</h2>
+        <h2>Новости</h2>
         {{ $index := site.GetPage (printf "/%s" $section) }}
         {{ with $index }}
           {{ $i18n := printf "%s.more" $section }}

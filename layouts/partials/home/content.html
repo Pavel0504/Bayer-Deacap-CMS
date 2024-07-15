@@ -8,7 +8,8 @@
     {{ partial "commons/image-banner" . }}
   </div>
 
-  <div class="container">
+  <div class="container" style="margin-top: 7vh;">
+    {{ partial "posts/items" . }}
     {{- $context := . -}}
     {{- $sections := slice "posts" "products" "projects" "casestudies" "publications" "places" "expertises" "services" "realestates" -}}
     {{- range $sections -}}
