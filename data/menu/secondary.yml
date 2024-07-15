@@ -1,2 +1,17 @@
 title: ""
-links: []
+links:
+  - blank: false
+    title: Условия использования сайта
+    url: https://pharma.bayer.ru/conditions-website
+  - blank: false
+    title: Пользовательское соглашение
+    url: https://pharma.bayer.ru/user-agreement
+  - blank: false
+    title: Политика Cookies
+    url: https://pharma.bayer.ru/cookies
+  - blank: false
+    title: Политика обработки персональных данных
+    url: https://pharma.bayer.ru/privacy-statement
+  - blank: false
+    title: Настройки файлов cookie
+    url: https://pharma.bayer.ru/#cookie-settings
