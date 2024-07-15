@@ -5,6 +5,7 @@ title: test
 hero:
   cta:
     blank: false
+    url: /test/
   cta_second:
     blank: false
   align: start

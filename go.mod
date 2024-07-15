@@ -8,7 +8,12 @@ require (
 	github.com/hugolify/hugolify-decap-cms v1.13.1 // indirect
 	github.com/hugolify/hugolify-theme v1.15.3 // indirect
 	github.com/hugolify/hugolify-theme-casestudies v1.0.11 // indirect
+	github.com/hugolify/hugolify-theme-persons v1.3.12 // indirect
 	github.com/hugolify/hugolify-theme-posts v1.1.19 // indirect
+	github.com/hugolify/hugolify-theme-posts-authors v1.0.12 // indirect
+	github.com/hugolify/hugolify-theme-posts-categories v1.0.9 // indirect
+	github.com/hugolify/hugolify-theme-posts-expertises v1.0.3 // indirect
+	github.com/hugolify/hugolify-theme-posts-tags v1.0.12 // indirect
 	github.com/midzer/tobii v2.5.0+incompatible // indirect
 	github.com/twbs/bootstrap v5.3.3+incompatible // indirect
 	github.com/twbs/icons v1.11.3 // indirect

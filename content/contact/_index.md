@@ -55,6 +55,8 @@ blocks:
     items:
       - Legal mentions
       - Privacy policy
+      - Контакты
+      - test
   - type: selected-posts
     section: posts
     show_more: true
