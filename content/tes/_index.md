@@ -1,6 +1,5 @@
 ---
 isPage: true
-draft: true
 title: test
 hero:
   cta:

@@ -1,5 +1,5 @@
 ---
-isIndex: false
+isIndex: true
 draft: false
 date: 2024-07-15T06:22:00.000Z
 title: Определен победитель конкурса Nuclear Medicine 2021
