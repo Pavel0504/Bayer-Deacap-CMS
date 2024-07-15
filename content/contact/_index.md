@@ -63,4 +63,9 @@ blocks:
     background: false
     items:
       - 2024/07/2024-07-15--1
+  - type: latest
+    count: 3
+    show_more: true
+    background: false
+    section: posts
 ---
