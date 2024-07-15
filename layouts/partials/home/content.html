@@ -4,9 +4,11 @@
 
 {{- else -}}
 
-  <div class="container">
+  <div class="container" style="max-width: 100%;margin: 0;padding: 0;height: 100%;">
     {{ partial "commons/image-banner" . }}
-    
+  </div>
+
+  <div class="container">
     {{- $context := . -}}
     {{- $sections := slice "posts" "products" "projects" "casestudies" "publications" "places" "expertises" "services" "realestates" -}}
     {{- range $sections -}}
