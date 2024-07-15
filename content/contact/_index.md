@@ -1,5 +1,6 @@
 ---
 isPage: true
+draft: true
 title: Контакты
 hero:
   surtitle: Surtitle
