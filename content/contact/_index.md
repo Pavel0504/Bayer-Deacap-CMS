@@ -67,5 +67,5 @@ blocks:
     count: 3
     show_more: true
     background: false
-    section: posts
+    section: projects
 ---
